@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dice-rolling"
+version = "0.1.0"
+description = ""
+authors = ["Robert Portelli <github@robertportelli.com>"]
+readme = "README.md"
+packages = [{include = "dice_rolling", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+mypy = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
