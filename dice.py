@@ -1,4 +1,6 @@
 # dice.py
+import random
+
 
 def parse_input(input_string):
     """Return `input_string` as an integer between 1 and 6.
@@ -14,7 +16,17 @@ def parse_input(input_string):
         raise SystemExit(1)
 
 
+def roll_dice(num_dice):
+    """
+    pass
+    """
+
+    return [random.randint(1, 6) for _ in range(num_dice)]
+
+
 # ~~~ App's main code block ~~~
 # 1. Get and validate user's input
 num_dice_input = input("How many dice do you want to roll? [1-6] ")
 num_dice = parse_input(num_dice_input)
+# 2. Roll the dice
+roll_results = roll_dice(num_dice)
